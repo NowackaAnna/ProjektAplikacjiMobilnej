@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Flagi</string>
+    <string name="Europa">Europa</string>
+    <string name="Azja">Azja</string>
+    <string name="AmerykaPółnocna">Ameryka Północna</string>
+    <string name="AmerykaPołudniowa">Ameryka Południowa</string>
+    <string name="AustraliaiOceania">Australia i Oceania</string>
+    <string name="Afryka">Afryka</string>
+</resources>
