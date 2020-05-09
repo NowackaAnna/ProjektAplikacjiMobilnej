@@ -1,0 +1,6 @@
+Raport z dnia 6.05.2020 r
+* Zrobione: Aplikacja otwiera bazę danych.
+* Nie udało się: Pobieranie danych z bazy przez błąd o niezgodnym formacie odczytu
+
+Do zrobienia:
+* Naprawienie tego błędu i odczytywanie danych z bazy oraz wyświetlanie ich w aplikacji
