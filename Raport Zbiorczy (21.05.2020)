@@ -1,0 +1,15 @@
+Raport Zbiorczy
+
+* Zrobione:
+  - Ogólnie Quiz działa, tzn. wyświetlają się flagi, podpoiwedzi, można wpisać odpowiedź, jest ona sprwdzana. Dostajemy informację o poprawności. Jeśli opowiedź jest poprawna można przejśc do następnego pytania.
+  - W menu głównym wyświetla się aktualna liczba zdobytych punktów w danym kontynencie.
+  - Jeśli po którymś pytaniu klikniemy 'Powrót' także w menu głównym pokaże nam się zaktualizowana wartość punktów.
+  - Po ostatnim pytaniu z kontynentu dostajemy informację z gratulacjami ukończenia.
+  - W każdym kontynencie jest na razie po 5 pytań testowych.
+  
+  * Do zronienia:
+  - Obsługa systemowego przycisku powrotu.
+  - Poprawa wylądu ( jak włącza się klawiatura do wpisywania, wszytsko podjeżdża do góry).
+  - Dodanie pytań.
+  
+  
