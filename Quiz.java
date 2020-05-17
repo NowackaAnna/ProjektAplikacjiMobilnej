@@ -180,7 +180,27 @@ public class Quiz extends AppCompatActivity {
                 if (check_odpowiedz==Boolean.TRUE){
                     mPunkty = mPunkty+1;
                     Cursor q_country;
-                    q_country = mDBHelper.queryQuestionEuropa(Integer.toString(quest_nr));
+                    if(tabela.equals("Europa")) {
+                        q_country = mDBHelper.queryQuestionEuropa(Integer.toString(quest_nr));
+                    }
+                    else if (tabela.equals("Afryka")){
+                        q_country = mDBHelper.queryQuestionAfryka(Integer.toString(quest_nr));
+                    }
+                    else if(tabela.equals("Azja")){
+                        q_country = mDBHelper.queryQuestionAzja(Integer.toString(quest_nr));
+                    }
+                    else if(tabela.equals("AmerykaN")){
+                        q_country = mDBHelper.queryQuestionAmerykaN(Integer.toString(quest_nr));
+                    }
+                    else if(tabela.equals("AmerykaS")){
+                        q_country = mDBHelper.queryQuestionAmerykaS(Integer.toString(quest_nr));
+                    }
+                    else if (tabela.equals("AustraliaOceania")){
+                        q_country = mDBHelper.queryQuestionAustraliaOceania(Integer.toString(quest_nr));
+                    }
+                    else {
+                        q_country = mDBHelper.queryQuestionEuropa(Integer.toString(quest_nr));
+                    }
                     if (q_country.moveToFirst()){
                         do{
                             mCountry = q_country.getString(0);
