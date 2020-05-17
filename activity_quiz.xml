@@ -30,8 +30,8 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Państwo"
+        android:inputType="textCapCharacters"
+        android:hint="PAŃSTWO"
         app:layout_constraintBaseline_toBaselineOf="@+id/Sprawdz"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:text="@string/Poprzednie"
+        android:text="@string/Powrót"
         app:layout_constraintBaseline_toBaselineOf="@+id/Nastepny"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -20,7 +20,7 @@
         android:background="#51adfc"
         android:text="@string/Europa"
         android:textColor="#d2e9fc"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +38,7 @@
         android:background="#f7e452"
         android:text="@string/Azja"
         android:textColor="#d2e9fc"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Europa" />
@@ -56,7 +56,7 @@
         android:background="#f54553"
         android:text="@string/AmerykaPółnocna"
         android:textColor="#d2e9fc"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Azja" />
@@ -74,7 +74,7 @@
         android:background="#c20413"
         android:text="@string/AmerykaPołudniowa"
         android:textColor="#d2e9fc"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AmerykaN" />
@@ -92,7 +92,7 @@
         android:background="#2ac947"
         android:text="@string/AustraliaiOceania"
         android:textColor="#d2e9fc"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AmerykaS" />
@@ -110,7 +110,7 @@
         android:background="#2b3136"
         android:text="@string/Afryka"
         android:textColor="#d2e9fc"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
