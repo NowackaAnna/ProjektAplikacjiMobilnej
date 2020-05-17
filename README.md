@@ -7,6 +7,6 @@ Będzie to wyglądało w następujący sposób:
 - Jeśli użytkownik nie będzie znał odpowiedz, może kliknąć przycisk podpowiedź i wyświetli mu się jedna informacja na temat danego kraju. Dla danego państwa przewiduję dwie możliwe podpowiedzi.
 - Po wpisaniu błędnej odpowiedzi wyświetli się komunikat, że nazwa jest niepoprawna.
 - Po wpisaniu poprawnej odpowiedzi dostaniemy komunikat z gratulacjami.
-- W obu przypadkach możemy przejść do innego pytania.
+- Bez podania poprawnej odpowiedzi, nie możemy przejśc do następnego pytania z tego kontynentu (ale możemy zmienić kontynent).
 
 Technologie: Android Studio - tworzenie aplikacji, Baza SQL - trzymanie danych dotyczących państw razem ze zdjęciami/obrazkami flag (id, nazwa kraju, nazwa kontynentu, flaga, podpowiedź 1, podpowiedź 2).
