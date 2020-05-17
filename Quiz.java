@@ -48,6 +48,7 @@ public class Quiz extends AppCompatActivity {
 
 
         check_odpowiedz = Boolean.FALSE;
+        buttonNastepne.setEnabled(false);
 
         Intent i = getIntent();
         Bundle b = i.getExtras();
@@ -62,6 +63,7 @@ public class Quiz extends AppCompatActivity {
         Cursor c;
         final Cursor question_country;
         Cursor question_country1;
+        mPunkty = nr_pytania;
 
         try{
             mDBHelper.createDataBase();
@@ -112,7 +114,7 @@ public class Quiz extends AppCompatActivity {
         String numerPytania = Integer.toString(nr_pytania);
 
 
-        mPunkty = nr_pytania;
+
 
         if (question_country.moveToFirst()){
             do{
@@ -178,7 +180,7 @@ public class Quiz extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (check_odpowiedz==Boolean.TRUE){
-                    mPunkty = mPunkty+1;
+                    //mPunkty = mPunkty+1;
                     Cursor q_country;
                     if(tabela.equals("Europa")) {
                         q_country = mDBHelper.queryQuestionEuropa(Integer.toString(quest_nr));
@@ -229,8 +231,9 @@ public class Quiz extends AppCompatActivity {
         buttonPowrot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMain();
                 mDBHelper.close();
+                openMain();
+                
             }
         });
 
