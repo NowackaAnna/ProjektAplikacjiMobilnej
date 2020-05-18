@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
     Integer AzjaPunkty;
     Integer AustaliaPunkty;
 
+    Integer maxLiczbaPytanEuropa;
+    Integer maxLiczbaPytanAzja;
+    Integer maxLiczbaPytanAfryka;
+    Integer maxLiczbaPytanAmerykaN;
+    Integer maxLiczbaPytanAmerykaS;
+    Integer maxLiczbaPytanAustraliaOceania;
+
     String mEuropaPunkty;
     String mAfrykaPunkty;
     String mAmerykaNPunkty;
@@ -91,6 +98,13 @@ public class MainActivity extends AppCompatActivity {
             }while (mPunkty.moveToNext());
         }
 
+        maxLiczbaPytanEuropa = mDBHelper.countEuropa("Europa", null,null,null,null,null,null);
+        maxLiczbaPytanAfryka = mDBHelper.countAfryka("Afryka", null,null,null,null,null,null);
+        maxLiczbaPytanAzja = mDBHelper.countAzja("Azja", null,null,null,null,null,null);
+        maxLiczbaPytanAmerykaN = mDBHelper.countAmerykaN("AmerykaN", null,null,null,null,null,null);
+        maxLiczbaPytanAmerykaS = mDBHelper.countAmerykaS("AmerykaS", null,null,null,null,null,null);
+        maxLiczbaPytanAustraliaOceania = mDBHelper.countAustraliaOceania("AustraliaOceania", null,null,null,null,null,null);
+
         mDBHelper.close();
 
 
@@ -124,6 +138,52 @@ public class MainActivity extends AppCompatActivity {
         buttonAmerykaS.setText(nazwaAmS + mAmerykaSPunkty);
         buttonAzja.setText(nazwaAz + mAzjaPunkty);
         buttonAustralia.setText(nazwaAO + mAustaliaPunkty);
+
+
+        if((EuropaPunkty+1)<=maxLiczbaPytanEuropa){
+            buttonEuropa.setEnabled(true);
+        }
+        else{
+            buttonEuropa.setEnabled(false);
+        }
+
+        if((AzjaPunkty+1)<=maxLiczbaPytanAzja){
+            buttonAzja.setEnabled(true);
+        }
+        else {
+            buttonAzja.setEnabled(false);
+        }
+
+        if((AfrykaPunkty+1)<=maxLiczbaPytanAfryka){
+            buttonAfryka.setEnabled(true);
+        }
+        else {
+            buttonAfryka.setEnabled(false);
+        }
+
+        if((AmerykaNPunkty+1)<=maxLiczbaPytanAmerykaN){
+            buttonAmerykaN.setEnabled(true);
+        }
+        else {
+            buttonAmerykaN.setEnabled(false);
+        }
+
+        if((AmerykaSPunkty+1)<=maxLiczbaPytanAmerykaS){
+            buttonAmerykaS.setEnabled(true);
+        }
+        else {
+            buttonAmerykaS.setEnabled(false);
+        }
+
+        if((AustaliaPunkty+1)<=maxLiczbaPytanAustraliaOceania){
+            buttonAustralia.setEnabled(true);
+        }
+        else {
+            buttonAustralia.setEnabled(false);
+        }
+
+
+
 
 
         buttonEuropa.setOnClickListener(new View.OnClickListener() {

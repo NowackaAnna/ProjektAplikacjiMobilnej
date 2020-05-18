@@ -180,7 +180,7 @@ public class Quiz extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (check_odpowiedz==Boolean.TRUE){
-                    //mPunkty = mPunkty+1;
+
                     Cursor q_country;
                     if(tabela.equals("Europa")) {
                         q_country = mDBHelper.queryQuestionEuropa(Integer.toString(quest_nr));
@@ -233,7 +233,7 @@ public class Quiz extends AppCompatActivity {
             public void onClick(View view) {
                 mDBHelper.close();
                 openMain();
-                
+
             }
         });
 
