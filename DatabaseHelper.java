@@ -21,7 +21,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DB_NAME = "flagibaza4";
+    public static final String DB_NAME = "flagibaza6";
     private static String DB_PATH = null;
     private static final int DB_VERSION = 1;
     public static final String TABLE_Europa = "Europa";
@@ -33,7 +33,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(Context context){
         super(context, DB_NAME, null, 1);
         this.mContext = context;
-        //File path = context.getDatabasePath("flagibaza4.db");
+        //File path = context.getDatabasePath("flagibaza6.db");
 
         //DB_PATH = path.getAbsolutePath();
         this.DB_PATH = "/data/data/"+context.getPackageName()+"/"+"databases";

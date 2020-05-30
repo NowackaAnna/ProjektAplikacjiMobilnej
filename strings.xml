@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Flagi</string>
+    <string name="app_name"><font size = "22">FLAGI</font></string>
     <string name="Europa">Europa</string>
     <string name="Azja">Azja</string>
     <string name="AmerykaPółnocna">Ameryka Północna</string>
@@ -12,4 +12,5 @@
     <string name="Podpowiedz2">Podpowiedź 2</string>
     <string name="Sprawdz">Sprawdź</string>
     <string name="NazwaTablicy">NazwaTablicy</string>
+    <string name="Powrót">Powrót</string>
 </resources>

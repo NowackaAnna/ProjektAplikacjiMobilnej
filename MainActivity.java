@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonAzja;
     private Button buttonAustralia;
 
-    //private DatabaseHelper mDBHelper;
-    //private SQLiteDatabase mDb;
     public String table_name;
     public Integer question_number;
     private SQLiteDatabase mDb;
@@ -58,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setTitle("FLAGI");
+
 
 
         DatabaseHelper mDBHelper = new DatabaseHelper(MainActivity.this);
@@ -192,8 +192,11 @@ public class MainActivity extends AppCompatActivity {
                 table_name = "Europa";
                 question_number = EuropaPunkty;
                 openQuiz();
+                finish();
 
             }
+
+
         });
 
         buttonAfryka.setOnClickListener(new View.OnClickListener() {
@@ -202,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
                 table_name = "Afryka";
                 question_number = AfrykaPunkty;
                 openQuiz();
+                finish();
 
             }
         });
@@ -212,6 +216,7 @@ public class MainActivity extends AppCompatActivity {
                 table_name = "AmerykaN";
                 question_number = AmerykaNPunkty;
                 openQuiz();
+                finish();
 
             }
         });
@@ -222,6 +227,7 @@ public class MainActivity extends AppCompatActivity {
                 table_name = "AmerykaS";
                 question_number = AmerykaSPunkty;
                 openQuiz();
+                finish();
 
             }
         });
@@ -232,6 +238,7 @@ public class MainActivity extends AppCompatActivity {
                 table_name = "Azja";
                 question_number = AzjaPunkty;
                 openQuiz();
+                finish();
 
             }
         });
@@ -256,4 +263,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
 }

@@ -1,15 +1,20 @@
 package pl.edu.uwr.pum.flagi;
 
+import androidx.annotation.ContentView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +43,7 @@ public class Quiz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        View viewQuiz = (View) findViewById(R.id.quiz);
         final ImageView mFlagaObrazek = (ImageView) findViewById(R.id.imageView);
         Button buttonPodpowiedz1 = (Button)findViewById(R.id.Podpowiedz1);
         Button buttonPodpowiedz2 = (Button)findViewById(R.id.Podpowiedz2);
@@ -45,6 +51,7 @@ public class Quiz extends AppCompatActivity {
         final EditText editPanstwo = (EditText)findViewById(R.id.editPanstwo);
         final Button buttonNastepne = (Button)findViewById(R.id.Nastepny);
         Button buttonPowrot = (Button)findViewById(R.id.Poprzedni);
+
 
 
         check_odpowiedz = Boolean.FALSE;
@@ -82,27 +89,38 @@ public class Quiz extends AppCompatActivity {
         if (tabela.equals("Europa")){
             question_country1 = mDBHelper.queryQuestionEuropa(Integer.toString(quest_nr));
             liczba_pytan = mDBHelper.countEuropa("Europa", null,null,null,null,null,null);
-
+            getSupportActionBar().setTitle("Flagi - Europa");
+            viewQuiz.setBackgroundColor(Color.argb(255, 128, 229, 255));
         }
         else if (tabela.equals("Afryka")){
             question_country1 = mDBHelper.queryQuestionAfryka(Integer.toString(quest_nr));
             liczba_pytan = mDBHelper.countAfryka("Afryka", null,null,null,null,null,null);
+            getSupportActionBar().setTitle("Flagi - Afryka");
+            viewQuiz.setBackgroundColor(Color.argb(255, 191, 191, 191));
         }
         else if (tabela.equals("Azja")){
             question_country1 = mDBHelper.queryQuestionAzja(Integer.toString(quest_nr));
             liczba_pytan = mDBHelper.countAzja("Azja", null,null,null,null,null,null);
+            getSupportActionBar().setTitle("Flagi - Azja");
+            viewQuiz.setBackgroundColor(Color.argb(255, 255, 255, 153));
         }
         else if(tabela.equals("AmerykaN")){
             question_country1 = mDBHelper.queryQuestionAmerykaN(Integer.toString(quest_nr));
             liczba_pytan = mDBHelper.countAmerykaN("AmerykaN", null,null,null,null,null,null);
+            getSupportActionBar().setTitle("Flagi - Ameryka Północna");
+            viewQuiz.setBackgroundColor(Color.argb(255, 255, 153, 194));
         }
         else if(tabela.equals("AmerykaS")){
             question_country1 = mDBHelper.queryQuestionAmerykaS(Integer.toString(quest_nr));
             liczba_pytan = mDBHelper.countAmerykaS("AmerykaS", null,null,null,null,null,null);
+            getSupportActionBar().setTitle("Flagi - Ameryka Południowa");
+            viewQuiz.setBackgroundColor(Color.argb(255, 255, 128, 128));
         }
         else if(tabela.equals("AustraliaOceania")){
             question_country1 = mDBHelper.queryQuestionAustraliaOceania(Integer.toString(quest_nr));
             liczba_pytan = mDBHelper.countAustraliaOceania("AustraliaOceania", null,null,null,null,null,null);
+            getSupportActionBar().setTitle("Flagi - Australia i Oceania");
+            viewQuiz.setBackgroundColor(Color.argb(255, 173, 235, 173));
         }
         else{
             question_country1 = mDBHelper.queryQuestionEuropa(Integer.toString(quest_nr));
@@ -245,38 +263,22 @@ public class Quiz extends AppCompatActivity {
 
 
 
-        //Toast.makeText(getApplicationContext(),tabela,Toast.LENGTH_SHORT).show();
-        //Toast.makeText(getApplicationContext(),numerPytania,Toast.LENGTH_SHORT).show();
 
 
         c = mDBHelper.queryEuropa("Europa",null,null,null,null,null,null);
-        //if (c.moveToFirst()){
-        //    do{
-        //        Toast.makeText(Quiz.this,"Country: "+c.getString(0)+"\n",Toast.LENGTH_LONG).show();
-        //    } while (c.moveToNext());
-        //}
 
-
-        //mDBHelper.getAllData();
-
-
-
-
-        //mDBHelper.query("flagibaza", null, null, null, null, null, null);
-        //Toast.makeText(getApplicationContext(),"Baza danych",Toast.LENGTH_SHORT).show();
-        //c = mDBHelper.query("flagibaza", null, null, null, null, null, null);
-        Integer ind = 1;
-        //ImageView viewImage = (ImageView) findViewById(R.id.imageView);
-        //for (Rekord k:mDBHelper.pokazWybraneEuropa(ind)){
-            //viewImage.setImage(textpokaz.getText() + "\nNazwa środka: " + k.getSrodek()+ "\n* Kilometry: "+k.getKilometry()+"\n* Metry: "+k.getMetry()+"\n* Powtórzenia: "+k.getPowtorzenia()+"\n* Kilogramy: "+k.getKilogramy()+"\n* Czas(min): "+k.getCzas()+"\n* Treść: "+k.getTresc()+"\n");
-          //  Toast.makeText(getApplicationContext(),k.getCountry(),Toast.LENGTH_SHORT).show();
-        //}
-        //Cursor k = mDBHelper.dajWszystkie();
 
     }
+
     public void openMain() {
+        onBackPressed();
+        finish();
+
+    }
+    @Override
+    public void onBackPressed() {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
-
+        super.onBackPressed();
     }
 }

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#b3dcff"
+    android:id="@+id/quiz"
     tools:context=".Quiz">
 
     <ImageView
@@ -13,7 +14,7 @@
         android:layout_height="200dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,10 +40,14 @@
         android:id="@+id/Sprawdz"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
+        android:height="10dp"
+        android:background="@drawable/gradient_sprawdz"
         android:text="@string/Sprawdz"
+        android:textColor="#d2e9fc"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editPanstwo"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -53,7 +58,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
+        android:height="10dp"
+        android:background="@drawable/gradient_button_quiz"
         android:text="@string/Powrót"
+        android:textColor="#404040"
+        android:textSize="17sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/Nastepny"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -61,10 +70,13 @@
         android:id="@+id/Nastepny"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
+        android:background="@drawable/gradient_button_quiz"
         android:text="@string/Nastepne"
+        android:textSize="17sp"
+        android:textColor="#404040"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,20 +86,29 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/gradient_button_quiz"
         android:text="@string/Podpowiedz1"
+        android:textColor="#404040"
+        android:textSize="17sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Podpowiedz2"
         app:layout_constraintEnd_toStartOf="@+id/Podpowiedz2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Podpowiedz2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
+        android:background="@drawable/gradient_button_quiz"
         android:text="@string/Podpowiedz2"
+        android:textColor="#404040"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Podpowiedz1"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
